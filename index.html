@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Your Carbon Footprint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculate Your Carbon Footprint</h1>
+        <p>Answer the questions to find out how you can reduce your carbon footprint!</p>
+    </header>
+
+    <section id="mainMenu">
+        <h2>Select an Option:</h2>
+        <button onclick="showQuiz()">Take the Quiz: What's Your Carbon Footprint?</button>
+        <button onclick="showGame()">Play the Idle Environmental Game!</button>
+    </section>
+
+    <section id="quiz" style="display: none;">
+        <h2>Take the Quiz: What's Your Carbon Footprint?</h2>
+        <form id="quizForm">
+            <div id="questionContainer"></div>
+            <div id="buttonContainer">
+                <button type="button" id="nextButton" onclick="nextQuestion()" style="display: none;">Next Question</button>
+            </div>
+        </form>
+        <p id="quizResult" style="display: none;"></p>
+        <div id="tipsContainer" style="display: none;"></div>
+        <div id="socialSharing" style="display: none;">
+            <h3>Share Your Results:</h3>
+            <a href="#" id="facebookShare" target="_blank">Share on Facebook</a><br>
+            <a href="#" id="twitterShare" target="_blank">Share on Twitter</a><br>
+            <a href="#" id="whatsappShare" target="_blank">Share on WhatsApp</a>
+        </div>
+        <div id="buttonContainer">
+            <button id="restartButton" onclick="restartQuiz()" style="display: none;">Restart Quiz</button>
+        </div>
+    </section>
+
+    <section id="game" style="display: none;">
+        <h2>Play the Idle Environmental Game!</h2>
+        <p id="gameInstructions">Collect as many carbon points as you can by clicking the button below!</p>
+        <button id="collectButton" onclick="collectPoints()">Collect Carbon Points</button>
+        <p id="score">Your Score: 0</p>
+        <div id="upgradeList"></div> <!-- Added for upgrades -->
+        <button id="restartGameButton" onclick="restartGame()" style="display: none;">Restart Game</button>
+    </section>
+
+    <section id="resources">
+        <h2>Tips & Resources</h2>
+        <p>Explore these resources to learn how you can improve your lifestyle:</p>
+        <ul>
+            <li><a href="https://explore.panda.org/climate/how-to-reduce-your-carbon-footprint" target="_blank">How to Reduce Your Carbon Footprint</a></li>
+            <li><a href="https://www.austintexas.gov/blog/top-10-ways-reduce-your-carbon-footprint-and-save-money" target="_blank">Top 10 Ways to Reduce Your Carbon Footprint</a></li>
+            <li><a href="https://www.mass.gov/info-details/reduce-your-carbon-footprint-at-home" target="_blank">Reduce Your Carbon Footprint at Home</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p class="credits">Made by Ostine Chen, Lucas Duan, and Bishes Parajuli</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
